@@ -1,0 +1,263 @@
+body{
+  background-color: #e2e8f0;
+}
+/* Estilos para la barra de navegación */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 30px;
+  align-items: center;
+}
+
+.mainCartWrapp{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e2e8f0;
+  color: black;
+}
+
+.mainCartWrapp p {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.noProducts{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkNoProucts{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+
+.cartProductsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 10rem ;
+  background-color: #e2e8f0;
+  width: 50%;
+}
+
+/* Estilos para el contenedor de compra */
+.buyDiv {
+  width: 45%;
+  margin-left: 20px; 
+  padding: 40px;
+  background-color: #f8fafc; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 0.1px solid black;
+  color: black;
+  margin-top: 200px;
+  width: 427px;
+  height: 373px;
+}
+
+.buyDivInfo{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.buyDivInfo p{
+  font-size: large;
+}
+
+.cartBtn{
+  padding: 12.5px 30px;
+  border:0;
+  border-radius: 8px;
+  background-color: #2ba8fb;
+  font-weight: bolder;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  width: 90%;
+}
+
+.cartBtn:hover{
+  background-color: rgba(20,167,62,1);
+  box-shadow: 0 0 20px #6cf5ff50;
+  transform: scale(1,1);
+}
+
+.cartBtn:active{
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.5s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+/*card*/
+
+.cardDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.cardBtn{
+  height: 50px;
+  margin:10px;
+  margin-right: 5rem;
+  align-self: flex-end;
+}
+
+.card {
+  width: 245px;
+  height: 155px;
+  background: lightgrey;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.foreground {
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:  radial-gradient(
+    circle 897px at 9% 80.3%,
+    rgba(55, 60, 245, 1) 0%,
+    rgba(234, 161, 15, 0.9) 100.2%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(2.8px);
+  padding: 16px;
+  color: white;
+}
+
+.credit-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit-card-chip-container {
+  margin: 8px 0;
+  height: 40px;
+  width: 40px;
+}
+
+.chip {
+  width: 100%;
+  height: 100%;
+}
+
+.category, .bank {
+  font-size: smaller;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.names {
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+.serial {
+  align-self: flex-end;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: monospace;
+}
+
+.expire {
+  margin-left: 3px;
+  font-size: smaller;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainCartWrapp {
+    flex-direction: column;
+  }
+
+  .cartProductsWrapper {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .buyDiv {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .cardDiv {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    padding: 8px 16px;
+    justify-content: center;
+  }
+
+  .linkDiv {
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cartIcon span {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+  }
+
+  .cartBtn{
+    width: 100%;
+  }
+
+  .buyDiv {
+    padding: 5px;
+    width: 70%;
+  }
+
+  .cardDiv{
+    width: 100%;
+  }
+  .card {
+    max-width: 100%;
+  }
+  .cartProductsWrapper{
+    margin-top: 120px;
+    width: 70%;
+  }
+}

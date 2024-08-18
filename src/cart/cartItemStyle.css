@@ -1,0 +1,133 @@
+.cartItemWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    border: 0.1px solid black;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    background-color: #f8fafc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    overflow: hidden;
+  }
+  
+  .cartItemImg {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .cartItemInfo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .cartItemName {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .cartItemCounter {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .cartItemCounter h2 {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 0 10px;
+  }
+  
+  .cartItemCounter button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .addBtn {
+    background-color: rgba(20, 167, 62, 1);
+  }
+  
+  .subBtn {
+    background-color: #FF2849;
+  }
+  
+  .addBtn:hover {
+    background-color: rgba(16, 143, 52, 1);
+  }
+  
+  .subBtn:hover {
+    background-color: #d11c35;
+  }
+  
+  .cartItemPrice {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  /* Media Queries para adaptabilidad */
+  
+  @media only screen and (max-width: 768px) {
+    .cartItemWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .cartItemImg {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .cartItemCounter {
+      margin: 10px 0;
+    }
+  
+    .cartItemCounter button {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .cartItemWrapper {
+      padding: 8px;
+    }
+  
+    .cartItemImg {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .cartItemCounter {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cartItemCounter button {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .cartItemCounter h2 {
+      font-size: 1em;
+    }
+  
+    .cartItemName, .cartItemPrice {
+      font-size: 1em;
+    }
+  }
+  

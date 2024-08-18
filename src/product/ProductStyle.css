@@ -1,0 +1,174 @@
+/* Estilo General del Contenedor del Producto */
+.productWrapper {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    align-items: center;
+    color: black;
+    box-shadow: 0 50px 50px #757676;
+    text-align: center; /* Alineación centrada */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilo de la Imagen del Producto */
+.productImg {
+    width: 100%; /* Ocupa el ancho disponible del contenedor */
+    max-height: 250px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Estilo del Nombre del Producto */
+.productName {
+    font-weight: 500;
+    font-size: 1.2em; /* Tamaño de fuente ajustado */
+    margin: 10px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo del Precio del Producto */
+.productPrice {
+    letter-spacing: 1px; /* Espaciado entre letras */
+    font-size: 1em; /* Tamaño de fuente ajustado */
+    margin: 10px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo del Botón de Producto */
+.productBtn {
+    width: 100%; /* Ocupa el ancho disponible del contenedor */
+    max-width: 160px; /* Ancho máximo del botón */
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(20, 167, 62, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilo del Contenedor del Icono dentro del Botón */
+.iconContainer {
+    position: absolute;
+    left: -35px; /* Ajusta la posición inicial */
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+/* Estilo del Icono del Producto */
+.iconProduct {
+    height: 20px; /* Tamaño del icono ajustado */
+    width: 20px;
+}
+
+/* Estilo del Texto dentro del Botón */
+.text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    z-index: 1;
+    transition: all 0.5s ease;
+    font-size: 0.9em; /* Tamaño de fuente ajustado */
+    font-weight: 600;
+}
+
+/* Estilo del Botón en Hover */
+.productBtn:hover .iconContainer {
+    transform: translateX(50px); /* Ajusta el desplazamiento */
+    border-radius: 40px;
+}
+
+.productBtn:hover .text {
+    transform: translateX(10px); /* Ajusta el desplazamiento */
+}
+
+.productBtn:active {
+    transform: scale(0.95); /* Escala el botón al ser presionado */
+}
+
+/* Media Query para pantallas de 480px */
+@media only screen and (max-width: 480px) {
+    .productWrapper {
+        max-width: 250px; /* Reduce el ancho máximo */
+        margin: 15px;
+    }
+
+    .productImg {
+        max-height: 200px; /* Reduce la altura de la imagen */
+    }
+
+    .productName {
+        font-size: 1.1em; /* Ajusta el tamaño del texto */
+    }
+
+    .productPrice {
+        font-size: 0.9em; /* Ajusta el tamaño del texto */
+    }
+
+    .productBtn {
+        max-width: 140px; /* Ajusta el ancho máximo del botón */
+        height: 35px;
+    }
+
+    .iconProduct {
+        height: 25px; /* Ajusta el tamaño del icono */
+        width: 25px;
+    }
+
+    .text {
+        font-size: 0.85em; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Media Query para pantallas de 360px */
+@media only screen and (max-width: 360px) {
+    .productWrapper {
+        max-width: 200px; /* Reduce el ancho máximo */
+        margin: 10px;
+    }
+
+    .productImg {
+        max-height: 180px; /* Reduce la altura de la imagen */
+    }
+
+    .productName {
+        font-size: 1em; /* Ajusta el tamaño del texto */
+    }
+
+    .productPrice {
+        font-size: 0.8em; /* Ajusta el tamaño del texto */
+    }
+
+    .productBtn {
+        max-width: 120px; /* Ajusta el ancho máximo del botón */
+        height: 30px;
+    }
+
+    .iconProduct {
+        height: 20px; /* Ajusta el tamaño del icono */
+        width: 20px;
+    }
+
+    .text {
+        font-size: 0.75em; /* Ajusta el tamaño del texto */
+    }
+}
